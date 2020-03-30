@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.css">
+</head>
+<body>
+    <h1 style="color:red">working in  a city called</h1>
+    <p class="num29">hello world</p>
+    <button id="btn" >delete</button>
+
+    <div id="drag">
+    <p>iam dragging</p>
+    </div>
+
+    <img src="pictures/ysr.jpg" height="100" width="100">
+
+    <div>
+        <input type="text" id="num21">
+        <button id="vr">add</button>
+        </div><br>
+        <div class="fade">
+            <div id="venkat1" style="background-color:orange;height:50px;width:200px;display:none"></div><br>
+            <div id="venkat2" style="background-color:white;height:50px;width:200px;display:none"></div><br>
+            <div id="venkat3" style="background-color:green;height:50px;width:200px;display:none"></div>
+        </div><br>
+        <button id="str1">india</button><br><br>
+
+
+        <input type="text" id="date" size="10">
+
+
+    <style>
+        #drag{
+            height:100px;
+            width:100px;
+            background-color: rgb(76, 145, 145);
+        }
+        .num29{
+            display: none;
+        }
+       
+    </style>
+
+    <script>
+
+        // $(selector).action()
+
+    $("p:first").text("hello venkat");
+
+
+
+       //$(document).ready(function(){})
+
+    $(document).ready(function(){
+        $("#btn").click(function(){
+           $("p:first").show();
+        })
+    })
+
+      
+      // .val() method
+
+      $(document).ready(function(){
+          $("#vr").click(function(){
+            var z=  $("#num21").val();
+            console.log(z);
+        
+          })
+      })
+
+     // fadeIn method
+      
+      $(document).ready(function(){
+          $("#str1").click(function(){
+              $("#venkat1").fadeIn()
+              $("#venkat2").fadeIn("slow")
+              $("#venkat3").fadeIn(3000)
+          })
+      })
+
+
+          // jQuery ui 
+
+    $(document).ready(function(){
+        $("#drag").draggable();
+
+        });
+
+
+
+
+      // date picker
+
+       $("#date").datepicker();
+
+
+
+     </script>
+
+    
+</body>
+</html>
+
